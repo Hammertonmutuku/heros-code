@@ -32,3 +32,9 @@ public class Squad {
     public String getMotive() { return motive; }
 
     public int getCurrentSize() { return currentSize; }
+
+    public ArrayList<Hero> getHeroes() { return heroes; }
+
+    public static ArrayList<Squad> getSquadInstance() {
+        return Squad.squadInstance;
+    }
