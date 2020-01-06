@@ -25,6 +25,12 @@ public class HeroTest {
 
     }
 
+    @Test
+    public void AllPostsAreCorrectlyReturned_true() {
+        Hero hero = new Hero("Number 1: Superman");
+        Hero otherHero = new Hero ("How to pair successfully");
+        assertEquals(2, Hero.getAll().size());
+    }
     @After
     public void tearDown() throws Exception {
     }
