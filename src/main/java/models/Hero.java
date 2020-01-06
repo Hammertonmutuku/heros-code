@@ -11,8 +11,17 @@ public class Hero {
     private int squad;
     private static ArrayList<Hero> heroInstance = new ArrayList<>();
 
-    private final String content;
-    private static ArrayList<Hero> instances= new ArrayList<>();
+    //private static ArrayList<Hero> instances= new ArrayList<>();
+
+    public Hero(String name, int age, String specialPower, String weakness, int squad) {
+        this.id = heroInstance.size();
+        this.name = name;
+        this.age = age;
+        this.specialPower = specialPower;
+        this.weakness = weakness;
+        this.squad = squad;
+        this.heroInstance.add(this);
+    }
 
     public Hero (String content){
         this.content = content;
