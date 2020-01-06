@@ -2,6 +2,16 @@
 
     <h1>Hero's list!</h1>
 
+
+    {{#if hero}}
+    {{#each hero }}
+    <p>Current hero:</p>
+    <p>{{ content }}</p>
+    {{/each}}
+    {{else}}
+    <p>No hero!</p>
+    {{/if}}
+
     <p>Add a new Hero:</p>
 
     <form action="/posts/new" method="POST">

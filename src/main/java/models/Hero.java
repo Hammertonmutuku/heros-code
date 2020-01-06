@@ -9,6 +9,7 @@ public class Hero {
 
     public Hero (String content){
         this.content = content;
+        instances.add(this);
     }
     public String getContent() {
         return content;
