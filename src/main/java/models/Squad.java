@@ -29,3 +29,6 @@ public class Squad {
     public int getMaxSize() {
         return maxSize;
     }
+    public String getMotive() { return motive; }
+
+    public int getCurrentSize() { return currentSize; }
