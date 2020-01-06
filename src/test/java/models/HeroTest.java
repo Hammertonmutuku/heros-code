@@ -26,11 +26,20 @@ public class HeroTest {
     }
 
     @Test
-    public void AllPostsAreCorrectlyReturned_true() {
+    public void AllHeroAreCorrectlyReturned_true() {
         Hero hero = new Hero("Number 1: Superman");
         Hero otherHero = new Hero ("How to pair successfully");
         assertEquals(2, Hero.getAll().size());
     }
+
+    @Test
+    public void AllHeroContainsAllHero_true() {
+        Hero hero = new Hero("Number 1: Superman");
+        Hero otherHero = new Hero ("How to pair successfully");
+        assertTrue(Hero.getAll().contains(hero));
+        assertTrue(Hero.getAll().contains(otherHero));
+    }
+
     @After
     public void tearDown() throws Exception {
     }
