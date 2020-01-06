@@ -12,32 +12,24 @@ public class HeroTest {
     public void setUp() throws Exception {
     }
 
+
+
     @Test
-    public void NewHeroObjectGetsCorrectlyCreated_true() throws Exception {
-        Hero hero = new Hero("Number 1:Superman");
-        assertEquals(true, hero instanceof Hero);
+    public void CreateInstanceOfHero_true() {
+        Hero newHero = new Hero("Iron Man", 100, "Technology", "Ego", 1);
+        assertTrue(newHero instanceof Hero);
     }
 
     @Test
-    public void HeroInstantiatesWithContent_true() throws Exception {
-        Hero hero = new Hero("Number 1: Superman");
-        assertEquals("Number 1: Superman", hero.getContent());
-
+    public void CorrectNumberOfHeroesAdded_true() {
+        Hero newHero = new Hero("Iron Man", 100, "Technology", "Ego", 1);
+        assertEquals(1, Hero.getHeroInstance().size());
     }
 
     @Test
-    public void AllHeroAreCorrectlyReturned_true() {
-        Hero hero = new Hero("Number 1: Superman");
-        Hero otherHero = new Hero ("How to pair successfully");
-        assertEquals(2, Hero.getAll().size());
-    }
-
-    @Test
-    public void AllHeroContainsAllHero_true() {
-        Hero hero = new Hero("Number 1: Superman");
-        Hero otherHero = new Hero ("How to pair successfully");
-        assertTrue(Hero.getAll().contains(hero));
-        assertTrue(Hero.getAll().contains(otherHero));
+    public void FindByIdReturnsCorrectHeroInstance() {
+        Hero newHero = new Hero("Iron Man", 100, "Technology", "Ego", 1);
+        assertEquals(newHero, Hero.findById(Hero.getHeroInstance().size()));
     }
 
     @After

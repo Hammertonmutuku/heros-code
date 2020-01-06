@@ -11,8 +11,6 @@ public class Hero {
     private int squad;
     private static ArrayList<Hero> heroInstance = new ArrayList<>();
 
-    //private static ArrayList<Hero> instances= new ArrayList<>();
-
     public Hero(String name, int age, String specialPower, String weakness, int squad) {
         this.id = heroInstance.size();
         this.name = name;
@@ -23,20 +21,31 @@ public class Hero {
         this.heroInstance.add(this);
     }
 
-    public Hero (String content){
-        this.content = content;
-        instances.add(this);
-    }
-    public String getContent() {
-        return content;
-    }
-    public static ArrayList<Hero> getAll(){
-        return instances;
+    public int getSquad() { return squad; }
+
+    public int getId() { return id; }
+
+    public String getName() {
+        return name;
     }
 
-    public static void clearAllPosts(){
-        instances.clear();
+    public int getAge() {
+        return age;
     }
 
+    public String getSpecialPower() {
+        return specialPower;
+    }
 
+    public String getWeakness() {
+        return weakness;
+    }
+
+    public static ArrayList<Hero> getHeroInstance() {
+        return heroInstance;
+    }
+
+    public static Hero findById(int id) {
+        return heroInstance.get(id-1);
+    }
 }

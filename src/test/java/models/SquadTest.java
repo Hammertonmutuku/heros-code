@@ -12,12 +12,21 @@ public class SquadTest {
     public void setUp() throws Exception {
     }
 
-    @After
-    public void tearDown() throws Exception {
-    }
     @Test
     public void CreateNewSquadInstance_true() {
         Squad newSquad = new Squad("Marvel", 8, "Space Wars");
         assertTrue(newSquad instanceof Squad);
     }
+
+    @Test
+    public void CorrectNumberOfSquadsAdded_true() {
+        Squad firstSquad = new Squad("Marvel", 8, "Space Wars");
+        Squad secondSquad = new Squad("DC", 10, "Super Human");
+        assertEquals(2, Squad.getSquadInstance().size());
+    }
+
+    @After
+    public void tearDown() throws Exception {
+    }
+
 }

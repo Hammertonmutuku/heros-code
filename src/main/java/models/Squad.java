@@ -2,7 +2,6 @@ package models;
 import java.util.ArrayList;
 import java.util.List;
 public class Squad {
-    public class Squad {
         private int id;
         private String name;
         private int currentSize;
@@ -10,7 +9,7 @@ public class Squad {
         private String motive;
         private ArrayList<Hero> heroes = new ArrayList<>();
         private static ArrayList<Squad> squadInstance = new ArrayList<>();
-}
+
 
     public Squad(String name, int maxSize, String motive) {
         this.id = squadInstance.size();
@@ -38,3 +37,19 @@ public class Squad {
     public static ArrayList<Squad> getSquadInstance() {
         return Squad.squadInstance;
     }
+    public static Squad findById(int id) {return squadInstance.get(id);}
+
+    public static void clearAll() {
+        squadInstance.clear();
+    }
+
+    public void addHero(Hero newHero) {
+        if (currentSize < maxSize) {
+            heroes.add(newHero);
+            currentSize ++;
+        }
+        else {
+            getHeroes();
+        }
+    }
+}
