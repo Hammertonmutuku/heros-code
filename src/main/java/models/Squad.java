@@ -11,3 +11,15 @@ public class Squad {
         private ArrayList<Hero> heroes = new ArrayList<>();
         private static ArrayList<Squad> squadInstance = new ArrayList<>();
 }
+
+    public Squad(String name, int maxSize, String motive) {
+        this.id = squadInstance.size();
+        this.name = name;
+        this.currentSize = 0;
+        this.maxSize = maxSize;
+        this.motive = motive;
+        this.squadInstance.add(this);
+    }
+
+    public int getId() { return id; }
+
