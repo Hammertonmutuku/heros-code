@@ -1,6 +1,7 @@
 {{#partial "content"}}
+    <h1>Heros's Code.</h1>
     <div class ="row">
-        <div class="col-md-6">
+        <div class="col-md-6 p-7">
                         <h2>Create a squad for your Heroes</h2>
                         <form action="/squad/form" method="post">
                             <div class="form-group">
@@ -24,7 +25,7 @@
                                 </select>
                             </div>
                             <div class="form-group">
-                                <button type="submit" class="btn btn-primary btn-sm">Create Squad</button>
+                                <button type="submit" class="btn btn-primary btn-block">Create Squad</button>
                             </div>
                         </form>
                         <h2>Add Hero, abilities and weaknesses</h2>
@@ -68,19 +69,12 @@
                                 </select>
                             </div>
                             <div class="form-group">
-                                <button type="submit" class="btn btn-success btn-sm">Add Hero</button>
+                                <button type="submit" class="btn btn-success btn-block">Add Hero</button>
                             </div>
                         </form>
                 </div>
-            </div>
-        </div>
-    </div>
         <div class="col-md-6">
-        <div class="col-8 p-5">
-            <div class="row">
-                <div class="col-12 p-2">
-                    <div class="container shadow p-3 mb-3 bg-white rounded">
-                        <h3>Heroes</h3>
+                        <h2>Heroes</h2>
 
                         {{#if heroes}}
                             <div class="container list-heroes">
@@ -96,11 +90,7 @@
                                 <p class="text-danger">No Heroes Added!!!</p>
                             </div>
                         {{/if}}
-                    </div>
-                </div>
-                <div class="col-12 p-2">
-                    <div class="container shadow p-3 mb-2 bg-white rounded">
-                        <h3>Squads</h3>
+                        <h2>Squads</h2>
 
                         {{#if squads}}
                             <div class="container list-squads">
@@ -114,16 +104,10 @@
                                 {{/each}}
                             </div>
                         {{else}}
-                            <div class="squads shadow p-2 mb-2 bg-light rounded">
                                 <p class="text-danger">No Squads Added!!!</p>
-                            </div>
                         {{/if}}
-                    </div>
                 </div>
-            </div>
-        </div>
-    </div>
-    </div>
+             </div>
 {{/partial}}
 
 {{> layout.hbs}}
